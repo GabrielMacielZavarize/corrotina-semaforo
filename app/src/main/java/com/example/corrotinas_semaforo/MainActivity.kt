@@ -66,7 +66,6 @@ fun SemaforoScreen(modifier: Modifier = Modifier) {
     var modoAtual by remember { mutableStateOf(ModoSemaforo.AUTOMATICO) }
     var luzAtual by remember { mutableStateOf(LuzSemaforo.VERMELHO) }
 
-    // Sempre que o modo muda, esta corrotina reinicia a lógica do semáforo.
     LaunchedEffect(modoAtual) {
         when (modoAtual) {
             ModoSemaforo.AUTOMATICO -> {
